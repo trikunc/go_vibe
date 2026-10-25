@@ -28,7 +28,10 @@ func main() {
 		log.Fatal("Error: Environment variable DATABASE_URL belum diatur. Silakan periksa file .env Anda.")
 	}
 
-	port := os.Getenv("APP_PORT")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = os.Getenv("APP_PORT")
+	}
 	if port == "" {
 		port = "8080"
 	}
@@ -81,11 +84,18 @@ func main() {
 		http.Redirect(w, r, "/register.html", http.StatusSeeOther)
 	})
 
-	serverAddr := ":" + port
-	log.Printf("Server Personal Notes berjalan di http://localhost%s\n", serverAddr)
+	serverAddr := "0.0.0.0:" + port
+	log.Printf("Server Personal Notes berjalan di port %s\n", port)
+
 	if err := http.ListenAndServe(serverAddr, mux); err != nil {
 		log.Fatalf("Server berhenti dengan error: %v", err)
 	}
+
+	// serverAddr := ":" + port
+	// log.Printf("Server Personal Notes berjalan di http://localhost%s\n", serverAddr)
+	// if err := http.ListenAndServe(serverAddr, mux); err != nil {
+	// 	log.Fatalf("Server berhenti dengan error: %v", err)
+	// }
 }
 
 // loadEnv membaca file .env secara manual tanpa dependensi eksternal
