@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes — Personal Notes</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">Personal Notes</a>
+    <div class="user-nav">
+      <span id="userGreeting">Memuat...</span>
+      <button id="logoutBtn" class="btn btn-secondary btn-sm">Keluar</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="dashboard-header">
+      <h2>Catatan Saya</h2>
+      <button id="btnNewNote" class="btn btn-primary">+ Buat Catatan</button>
+    </div>
+
+    <div id="alertBox" class="alert"></div>
+
+    <div id="notesGrid" class="notes-grid">
+      <!-- Daftar catatan akan dimuat secara dinamis oleh JavaScript -->
+    </div>
+
+    <div id="emptyState" class="empty-state" style="display: none;">
+      <p>Belum ada catatan.</p>
+      <p>Klik tombol <strong>+ Buat Catatan</strong> untuk menambahkan catatan pertama Anda!</p>
+    </div>
+  </main>
+
+  <!-- Modal Tambah / Edit Catatan -->
+  <div id="noteModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle" class="modal-title">Catatan Baru</h3>
+      </div>
+      <form id="noteForm">
+        <input type="hidden" id="noteId" value="">
+        <div class="form-group">
+          <label for="noteTitle">Judul</label>
+          <input type="text" id="noteTitle" name="title" required placeholder="Judul catatan" maxlength="200">
+        </div>
+        <div class="form-group">
+          <label for="noteContent">Isi Catatan</label>
+          <textarea id="noteContent" name="content" placeholder="Tuliskan catatan Anda di sini..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="btnCancelModal" class="btn btn-secondary">Batal</button>
+          <button type="submit" id="btnSaveNote" class="btn btn-primary">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/notes.js"></script>
+</body>
+</html>
+

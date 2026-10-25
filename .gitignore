@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Binary output
+vibecode
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# OS metadata
+.DS_Store
+Thumbs.db
+

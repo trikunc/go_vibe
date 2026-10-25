@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Akun — Personal Notes</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="auth-card">
+      <h1>Buat Akun Baru</h1>
+      <p class="subtitle">Mulai simpan dan kelola catatan Anda dengan aman</p>
+
+      <div id="alertBox" class="alert"></div>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" name="name" required placeholder="Nama Anda" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" required placeholder="nama@email.com" autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password (minimal 6 karakter)</label>
+          <input type="password" id="password" name="password" minlength="6" required placeholder="Buat password baru" autocomplete="new-password">
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn-primary btn-block">Daftar</button>
+      </form>
+
+      <div class="auth-footer">
+        Sudah memiliki akun? <a href="/login.html">Masuk di sini</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>
+
