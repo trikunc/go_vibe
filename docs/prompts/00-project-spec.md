@@ -177,7 +177,7 @@ SESSION_SECRET=replace-with-a-random-secret
 - Implementasikan aplikasi secara bertahap.
 - Buat perubahan sekecil mungkin dan jelaskan cara menguji hasilnya.
 
-## 8. Pemeriksaan Sebelum Vibe Coding
+## 7. Pemeriksaan Sebelum Vibe Coding
 
 - [x] Nama dan tujuan aplikasi sudah jelas.
 - [x] Fitur utama sudah ditentukan.
@@ -190,7 +190,7 @@ SESSION_SECRET=replace-with-a-random-secret
 
 ---
 
-## 9. Instruksi untuk Agy
+## 8. Instruksi untuk Agy
 
 Baca dan pahami file `docs/prompts/00-project-spec.md` secara lengkap.
 
